@@ -30,5 +30,5 @@ Execution: Targeted a web application hosted on the Apache server by injecting m
 Detection & Remediation:Wazuh monitored web server access and error logs to flag anomalous web traffic patterns and SQLi intrusion attempts, and successfully triggered an Active Response to automatically mitigate the threat at the network/host level.
 
                 References : 
-Configured and deployed following the official wazuh documentation https://documentation.wazuh.com/current/proof-of-concept-guide/index.html
+https://documentation.wazuh.com/current/proof-of-concept-guide/index.html
 https://documentation.wazuh.com/current/user-manual/capabilities/active-response/index.html
