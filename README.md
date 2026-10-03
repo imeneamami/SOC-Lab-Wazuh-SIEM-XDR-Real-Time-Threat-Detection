@@ -33,4 +33,4 @@ Execution: Targeted a web application hosted on the Apache server by injecting m
 Detection: Monitored web server access and error logs to flag anomalous web traffic patterns and suspicious request parameters.
 
                 References : 
-Configured and deployed using the official wazuh documentation https://documentation.wazuh.com/current/proof-of-concept-guide/index.html
+Configured and deployed following the official wazuh documentation https://documentation.wazuh.com/current/proof-of-concept-guide/index.html
