@@ -1,4 +1,4 @@
-# SOC-Lab-Wazuh-SIEM-XDR-Real-Time-Threat-Detection
+# SOC-Lab-Wazuh-SIEM-XDR-Real-Time-Threat-Detection&Response
 
 This project showcases the design and implementation of a lightweight, functional Home Security Operations Center (SOC) built from scratch to simulate enterprise-grade monitoring and incident detection.
 
@@ -12,13 +12,10 @@ Wazuh Agent (Ubuntu Endpoint): Installed on a target virtual machine to monitor 
 Attacker Machine (Kali Linux): Used to launch simulated cyberattacks against the target endpoint.
 
 🔬 Simulated Attack Scenarios & Detection
-To test the efficacy of the SIEM rules and real-time alerting, the following attack vectors were successfully executed and captured:
-
-SSH Brute-Force Attack using Hydra and  multiple consecutive failed login attempts:
-
-Execution: Simulated credential guessing attacks targeting the SSH service on the Ubuntu agent.
-
-Detection: Wazuh successfully detected multiple authentication failures and triggered  alerts for potential brute-force activity.
+SSH Brute-Force Attack & Active Response:
+Execution: Simulated password-guessing and credential-stuffing attacks targeting the SSH service using Hydra from Kali Linux with multiple consecutive failed login attempts.
+Detection: Wazuh successfully detected multiple authentication failures and triggered real-time alerts.
+Active Response: Configured automated mitigation inside the Wazuh manager configuration file utilizing Active Response to automatically trigger network-level blocks (`iptables`) against the malicious IP address.
 
 File Integrity Monitoring (FIM):
 
@@ -30,7 +27,8 @@ SQL Injection (SQLi) with Apache:
 
 Execution: Targeted a web application hosted on the Apache server by injecting malicious SQL payloads from Kali Linux to manipulate backend queries.
 
-Detection: Monitored web server access and error logs to flag anomalous web traffic patterns and suspicious request parameters.
+Detection & Remediation:Wazuh monitored web server access and error logs to flag anomalous web traffic patterns and SQLi intrusion attempts, and successfully triggered an Active Response to automatically mitigate the threat at the network/host level.
 
                 References : 
 Configured and deployed following the official wazuh documentation https://documentation.wazuh.com/current/proof-of-concept-guide/index.html
+https://documentation.wazuh.com/current/user-manual/capabilities/active-response/index.html
