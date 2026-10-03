@@ -31,3 +31,6 @@ SQL Injection (SQLi) with Apache:
 Execution: Targeted a web application hosted on the Apache server by injecting malicious SQL payloads from Kali Linux to manipulate backend queries.
 
 Detection: Monitored web server access and error logs to flag anomalous web traffic patterns and suspicious request parameters.
+
+                References : 
+Configured and deployed using the official wazuh documentation https://documentation.wazuh.com/current/proof-of-concept-guide/index.html
