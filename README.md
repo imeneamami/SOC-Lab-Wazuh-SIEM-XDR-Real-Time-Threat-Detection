@@ -31,4 +31,5 @@ Detection & Remediation:Wazuh monitored web server access and error logs to flag
 
                 References : 
 https://documentation.wazuh.com/current/proof-of-concept-guide/index.html
+
 https://documentation.wazuh.com/current/user-manual/capabilities/active-response/index.html
